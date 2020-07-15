@@ -28,7 +28,7 @@ describe('Odyssey authentication tests', () => {
     })
 
     it('should authenticate successfully', () => {
-        cy.login('mohammed.ali@wildcodeschool.com', 'testingpassword1937*')
+        cy.login('tonadressemail@wildcodeschool.com', 'tonmotdepasse')
         cy.wait(4000)
         cy.visit('https://argo.wildcodeschool.com/admin/quests')
         cy.url().should('contain', '/admin/quests')
