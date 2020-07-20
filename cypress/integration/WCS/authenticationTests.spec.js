@@ -5,6 +5,7 @@ describe('Odyssey authentication tests', () => {
         cy.visit('https://login.wildcodeschool.com/', {
             onBeforeLoad: (window) => {
                 Object.defineProperty(window.navigator, 'language', { value: 'fr_FR'})
+                Object.defineProperty(window.navigator, 'languages',  ['fr_FR'])
             }
         })
     });
