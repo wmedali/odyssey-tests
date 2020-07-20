@@ -16,5 +16,6 @@ cache:
 install:
   - npm ci
 script:
-  - export LANG=french
+  - sudo update-locale LANG=fr_FR
+  - exec bash
   - npm run cy:run:record

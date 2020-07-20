@@ -31,7 +31,7 @@ describe('Odyssey authentication tests', () => {
             .should('be.visible')
     })
 
-     it('should authenticate successfully', () => {
+     it.skip('should authenticate successfully', () => {
         cy.login('tonadressemail@wildcodeschool.com', 'tonmotdepasse')
         cy.wait(4000)
         cy.visit('https://argo.wildcodeschool.com/admin/quests')
