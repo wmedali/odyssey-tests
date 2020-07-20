@@ -6,7 +6,7 @@
   "scripts": {
     "cy:open" : "cypress open",
     "cy:run" : "cypress run",
-    "cy:run:record" : "cypress run --record"
+    "cy:run:record" : "cypress run --headless --browser chrome --record"
   },
   "author": "Mohammed Ali",
   "license": "ISC",
