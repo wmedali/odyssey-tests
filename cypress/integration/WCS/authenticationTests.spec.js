@@ -2,7 +2,11 @@ describe('Odyssey authentication tests', () => {
 
     let credentials = require('../../fixtures/credentials')
     beforeEach(() => {
-        cy.visit('https://login.wildcodeschool.com/')
+        cy.visit('https://login.wildcodeschool.com/', {
+            onBeforeLoad: (window) => {
+                Object.defineProperty(window.navigator, 'language', { value: 'fr_FR'})
+            }
+        })
     });
     
     it('should fail authentication on wrong credentials', () => {
