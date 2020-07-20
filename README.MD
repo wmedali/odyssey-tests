@@ -8,4 +8,4 @@ steps to run tests on this repo are :
 
 # Travis CI config Demo 
 
-BAdge : [![Build Status](https://travis-ci.com/wmedali/odyssey-tests.svg?branch=master)](https://travis-ci.com/wmedali/odyssey-tests)
+Badge : [![Build Status](https://travis-ci.com/wmedali/odyssey-tests.svg?branch=master)](https://travis-ci.com/wmedali/odyssey-tests)
