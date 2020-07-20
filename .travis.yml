@@ -1,19 +1,18 @@
 language: node_js
 node_js:
-  - 10
+- 10
 addons:
   apt:
     packages:
-      # Ubuntu 16+ does not install this dependency by default, so we need to install it ourselves
-      - libgconf-2-4
+    - libgconf-2-4
 cache:
-  # Caches $HOME/.npm when npm ci is default script command
-  # Caches node_modules in all other cases
   npm: true
   directories:
-    # we also need to cache folder with Cypress binary
-    - ~/.cache
+  - "~/.cache"
 install:
-  - npm ci
+- npm ci
 script:
-  - npm run cy:run:record
+- npm run cy:run:record -- --key $RECORD_KEY
+env:
+  global:
+    secure: S31BV471po1HW/l0H9cEphD/x3TYRdzRI79s4v0Q8WQVWh/t+EXlQgZYDZ+uYcMgQFeykY67MEPWKazf5Vw4zykMInbkRqhOdQOi+njXAMxblQGTEG+sBB8PYPv1W5yF5/4lv48VU2ktlYRb1i0uIRLtDLpsdfWNIzxZgVik/CGDaK8aOoJq96p4E0fqbncAafKH+WCmzoU9DjuWQp3Z0wHVixvY1Yxdt/65JVf83YWDzbvcShl3wI5H0sKiWjadS7x06M7l2SurWFsc9T1DB4ODuExuSHoR/L+X0cAH94gqGVVlMHtd9YbFwn4HJsfCcDg9SQJN9YTsWlGqBv9Dw9vxeDXThzDaObRouOSh4OBecGIhK4lmL/PG7YXu4Jkieb5BOGLSwrzD5hpIaty+xvNSeVaUlTa1wuQnFW4i0L1MrENK4UfDyFRYqC1AXXytbYrhrgCH9yMLahAx7LLnyG5pIP8MarrwVwH5R7UPegWOTIHKlSvco3NwKVkRDS8Rf/U8BoBJlIsRtCwjywvE1q+Kp3lx566Tr8y3RNTfjvstRWQlRWD4EPicrdBIkK56U1xPZtrsZWsOqInvfKbLJxTJsXSp0KRCawGDjRggezZ8BD18y5oia1SL/JtRNtxsWQyH0fk52ZkTvpvnpJJHWC+tt5shyizVapDPcX+iyM8=

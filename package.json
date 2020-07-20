@@ -6,7 +6,7 @@
   "scripts": {
     "cy:open" : "cypress open",
     "cy:run" : "cypress run",
-    "cy:run:record" : "cypress run --record --key 62792e58-ab25-4eba-9164-404389053fb2"
+    "cy:run:record" : "cypress run --record"
   },
   "author": "Mohammed Ali",
   "license": "ISC",
