@@ -12,8 +12,6 @@ cache:
 install:
 - npm ci
 script:
-- sudo update-locale LANG=fr_FR.UTF-8
-- sudo update-locale LC_ALL=fr_FR.UTF-8
-- sudo update-locale LANGUAGE=fr
+- sudo update-locale --locale-file localesDefinition
 - locale
 - npm run cy:run:record -- --key $RECORD_KEY
