@@ -16,4 +16,5 @@ cache:
 install:
   - npm ci
 script:
+  - export LANG=french
   - npm run cy:run:record

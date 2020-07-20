@@ -5,7 +5,7 @@ describe('Odyssey authentication tests', () => {
         cy.visit('https://login.wildcodeschool.com/')
     });
     
-    it.only('should fail authentication on wrong credentials', () => {
+    it('should fail authentication on wrong credentials', () => {
         cy.login(credentials[0].username,  credentials[0].password)
         if(!credentials.isCorrect) 
             cy.contains('Votre adresse email et/ou votre mot de passe sont incorrects')
@@ -13,7 +13,7 @@ describe('Odyssey authentication tests', () => {
         
     })
 
-    it.only('should fail when password is empty', () => {
+    it('should fail when password is empty', () => {
         cy.login(credentials[1].username,  credentials[1].password)
         if(!credentials.isCorrect)
             cy.contains('Merci de renseigner un mot de passe').should('be.visible')
