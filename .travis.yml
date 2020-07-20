@@ -12,4 +12,5 @@ cache:
 install:
 - npm ci
 script:
+- sudo localectl set-locale LANG=fr_FR.UTF-8
 - npm run cy:run:record -- --key $RECORD_KEY
