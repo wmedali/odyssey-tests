@@ -24,13 +24,13 @@ describe('Odyssey authentication tests', () => {
             cy.contains('Merci de renseigner un mot de passe').should('be.visible')
     })
 
-    it('should fail when email is empty', () => {
+    it.skip('should fail when email is empty', () => {
         cy.login(null, 'wrongPassword')
         cy.contains('Merci de renseigner votre adresse email')
             .should('be.visible')
     })
 
-    it('should fail when email has invalid format', () => {
+    it.skip('should fail when email has invalid format', () => {
         cy.login('mohammed.aliodeschool.com', 'wrongPassword')
         cy.contains('Votre adresse email est invalide')
             .should('be.visible')
