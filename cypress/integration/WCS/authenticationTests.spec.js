@@ -18,7 +18,7 @@ describe('Odyssey authentication tests', () => {
         
     })
 
-    it('should fail when password is empty', () => {
+    it.skip('should fail when password is empty', () => {
         cy.login(credentials[1].username,  credentials[1].password)
         if(!credentials.isCorrect)
             cy.contains('Merci de renseigner un mot de passe').should('be.visible')
